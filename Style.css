@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'Josefin Sans',sans-serif ;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+#hrader{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../Image/Snapchat-1048493243.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    padding: 10px 4%;
+}
+nav{
+    width: 100%; 
+    height: 15vh;
+    background-color: rgb(red green blue);
+    color: black; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    text-transform:capitalize;
+}
+nav .logo{
+    width: 10%; text-align: center;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 17px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    transition: 0.6s ease;
+}
+nav ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+nav ul li.active a{
+    background-color: #fff;
+    color: #000;
+}
+.header-text{
+    margin-top: 90px;
+    font-size: 60px;
+}
+.header-text h3{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+
+/* --------------about------------- */
+#about{
+    padding: 60px 0;
+    color: black;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 50px;
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 500;
+    color: #000;
+}
+.tab-title{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.6s;
+}
+.tab-links.active-link::after{
+    width: 60%;
+}
+
+.tab-contents ul li{
+    list-style:circle;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 21px;
+}
+.tab-contents{
+    display: none;
+    
+}
+.tab-contents.active-tab{
+    display: block;
+    
+}
+.btn2{
+    display: block;
+    margin: 14px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.5s;
+
+}
+.btn2:hover{
+    background: #ff004f;
+}
+
+/* -------------Services----------- */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin: 50px;
+}
+.services-list div{
+    background: seashell;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.6s,transform 0.6s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div p{
+    font-size: 21px;
+    font-weight: 350;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: royalblue;
+    font-size: 25px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* ------------------Portfolio--------------- */
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0,40px;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #330274;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.5s;
+
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+/* -------------Photos------------- */
+#photos{
+    padding: 30px 0;
+}
+.photos-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin: 40px;
+    vertical-align: middle;
+}
+.photos-list div{
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    margin: 40px;
+    transition: background 0.6s,transform 0.6s;
+    
+}
+.photos-list img{
+    width: 30%;
+    border-radius: 10px;
+    padding: 7px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.photos-list img:hover{
+    background: hwb(120 95% 3%);
+    transform: translateY(-10px);
+    transform: scale(1.1);
+}
+
+
+/* ------------Contact------------ */
+#contact{
+    padding: 60px 0;
+    color: black;
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-col-1{
+    flex-basis: 35%;
+}
+.contact-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.contact-col-2{
+    flex-basis: 60%;
+}
+.contact-col-2 p i{
+    color: #619f04;
+    margin-right:11px ;
+    font-size: 21px;
+}
+.social-media a{
+    text-decoration: none;
+    font-size: 40px;
+    margin-right: 15px;
+    display: inline;
+    transition: 0.5s;
+}
+.social-media a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+    }
+
+
+
+
+/* -----------------------footer-------------- */
+.footer{
+    text-align: center;
+    background-color: hsl(34, 78%, 91%);
+    font-size: 21px;
+}
+
+
+.btn3{
+    display: inline;
+    margin: 30px auto;
+    width: 35px;
+    height: 35px;
+    border: 1px solid hsl(98, 80%, 73%);
+    padding: 11px;
+    border-radius: 7px;
+    background-color: hsl(0, 43%, 99%);
+    color: black;
+    transition: background 0.5s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.btn3:hover{
+    background: #87fa77;
+}
+
+
+/* ------------------CSS for small screens------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
